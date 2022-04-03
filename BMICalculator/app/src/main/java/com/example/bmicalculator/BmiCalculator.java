@@ -36,7 +36,6 @@ public final class BmiCalculator extends AppCompatActivity {
             float bmi = weightValue / (heightValue * heightValue);
             this.displayBMI(bmi);
         }
-
     }
 
     private void displayBMI(float bmi) {
