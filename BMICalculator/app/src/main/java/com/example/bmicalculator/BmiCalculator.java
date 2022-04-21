@@ -1,6 +1,7 @@
 package com.example.bmicalculator;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,8 +28,8 @@ public final class BmiCalculator extends AppCompatActivity {
     }
 
     public final void calculateBMI(@NotNull View v) {
-        String heightStr = this.height.toString();
-        String weightStr = this.weight.toString();
+        String heightStr = this.height.getText().toString();
+        String weightStr = this.weight.getText().toString();
 
         if (!"".equals(heightStr) && !"".equals(weightStr)) {
             float heightValue = Float.parseFloat(heightStr) / (float)100;
