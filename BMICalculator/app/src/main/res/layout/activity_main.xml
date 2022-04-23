@@ -15,10 +15,22 @@
         android:text="@string/nav_bmi_calculator_btn" />
 
     <Button
+        android:id="@+id/nav_bmi_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_bmi_chart" />
+
+    <Button
         android:id="@+id/nav_calorie_calculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nav_calorie_calculator_btn" />
+
+    <Button
+        android:id="@+id/nav_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_quiz_button" />
 
     <ImageView
         android:id="@+id/imageView"

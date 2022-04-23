@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Quiz">
+
+    <TextView
+        android:id="@+id/Quiz_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/diet_quiz"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="413dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/Question">
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_title"
+            />
+
+        <RadioButton
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/answer1" />
+
+        <RadioButton
+            android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/answer2" />
+
+        <RadioButton
+            android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/answer3" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="413dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/Question">
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_question_2"
+            />
+
+        <RadioButton
+            android:id="@+id/answer1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_answer_1_1" />
+
+        <RadioButton
+            android:id="@+id/answer2_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_anwer_2_2" />
+
+        <RadioButton
+            android:id="@+id/answer3_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_answer_3_3" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="413dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/Question">
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ile_kg_chcesz_zgubic"
+            />
+
+        <RadioButton
+            android:id="@+id/answer1_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/powyzej_10kg" />
+
+        <RadioButton
+            android:id="@+id/answer2_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/powyzej_5_kg" />
+
+        <RadioButton
+            android:id="@+id/answer3_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/powyzej_20kg" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="413dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/Question">
+        <TextView
+            android:id="@+id/header3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ile_razy_w_tygodniu_jestes_w_stanie_cwiczyc"
+            />
+
+        <RadioButton
+            android:id="@+id/answer1_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_2_razy" />
+
+        <RadioButton
+            android:id="@+id/answer2_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_3_4_razy" />
+
+        <RadioButton
+            android:id="@+id/answer3_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_5_i_wiecej" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup5"
+        android:layout_width="413dp"
+        android:layout_height="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/Question">
+        <TextView
+            android:id="@+id/header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/potrzebujesz_planow_dietetycznych"
+            />
+
+        <RadioButton
+            android:id="@+id/answer1_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tak" />
+
+        <RadioButton
+            android:id="@+id/answer2_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nie" />
+
+        <RadioButton
+            android:id="@+id/answer3_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nie_wiem" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quiz_Label" />
+
+    <Button
+        android:id="@+id/submit_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="@string/quiz_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
