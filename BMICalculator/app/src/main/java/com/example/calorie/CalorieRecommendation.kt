@@ -1,63 +1,57 @@
-package com.example.calorie;
+package com.example.calorie
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
+import android.os.Bundle
+import android.view.View
+import com.example.bmicalculator.R
+import android.widget.ArrayAdapter
+import kotlin.jvm.internal.Intrinsics
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-
-import com.example.bmicalculator.R;
-
-import org.jetbrains.annotations.NotNull;
-
-import kotlin.jvm.internal.Intrinsics;
-
-public class CalorieRecommendation extends AppCompatActivity {
-
-    private EditText height;
-    private EditText weight;
-    private EditText age;
-    private Spinner gender;
-    private TextView result;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calorie_recommendation);
-
-        Spinner spinner = (Spinner) findViewById(R.id.gender);
+class CalorieRecommendation : AppCompatActivity() {
+    private var height: EditText? = null
+    private var weight: EditText? = null
+    private var age: EditText? = null
+    private var gender: Spinner? = null
+    private var result: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_calorie_recommendation)
+        val spinner = findViewById<View>(R.id.gender) as Spinner
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.spinner, android.R.layout.simple_spinner_item);
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.spinner, android.R.layout.simple_spinner_item
+        )
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
-
-        this.height = (EditText) this.findViewById(R.id.height);
-        this.weight = (EditText) this.findViewById(R.id.weight);
-        this.age = (EditText) this.findViewById(R.id.age);
-        this.gender = (Spinner) this.findViewById(R.id.gender);
-        this.result = (TextView) this.findViewById(R.id.result);
+        spinner.adapter = adapter
+        height = findViewById<View>(R.id.height) as EditText
+        weight = findViewById<View>(R.id.weight) as EditText
+        age = findViewById<View>(R.id.age) as EditText
+        gender = findViewById<View>(R.id.gender) as Spinner
+        result = findViewById<View>(R.id.result) as TextView
     }
 
-    public final void calculateCalories(@NotNull View v) {
-        Double calorie = 0.0;
-        if (this.gender.getSelectedItem().toString().equals("Female")) {
-            calorie = 655.1 + (9.563 * Float.parseFloat(weight.getText().toString()))+(1.85 * Float.parseFloat(height.getText().toString()))-(4.676 * Float.parseFloat(age.getText().toString()));
+    fun calculateCalories(v: View) {
+        var calorie = 0.0
+        calorie = if (gender!!.selectedItem.toString() == "Female") {
+            655.1 + 9.563 * weight!!.text.toString().toFloat() + 1.85 * height!!.text.toString()
+                .toFloat() - 4.676 * age!!.text.toString().toFloat()
         } else {
-            calorie = 66.5 + (13.75 * Float.parseFloat(weight.getText().toString()))+(5.003 * Float.parseFloat(height.getText().toString()))-(6.775 * Float.parseFloat(age.getText().toString()));
+            66.5 + 13.75 * weight!!.text.toString().toFloat() + 5.003 * height!!.text.toString()
+                .toFloat() - 6.775 * age!!.text.toString().toFloat()
         }
-        this.displayText(calorie);
+        displayText(calorie)
     }
 
-    private void displayText(Double calories) {
-        String bmiLabel = calories + "";
-        TextView result = this.result;
-        Intrinsics.checkNotNull(result);
-        result.setText(bmiLabel);
+    private fun displayText(calories: Double) {
+        val bmiLabel = calories.toString() + ""
+        val result = result
+        Intrinsics.checkNotNull(result)
+        result!!.text = bmiLabel
     }
 }

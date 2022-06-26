@@ -1,16 +1,12 @@
-package com.example;
+package com.example
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.bmicalculator.R
 
-import android.os.Bundle;
-
-import com.example.bmicalculator.R;
-
-public class Quiz extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+class Quiz : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_quiz)
     }
 }
